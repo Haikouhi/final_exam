@@ -11,7 +11,7 @@ class PagesController {
 
     public function divers() {
 
-        echo "<hr>Afficher le nombre de conducteur.";
+        echo "<hr>Afficher le nombre de conducteurs.";
         var_dump(Divers::nombreConducteurs());
 
         echo "<hr>Afficher le nombre de vehicule.";
@@ -20,10 +20,10 @@ class PagesController {
         echo "<hr>Afficher le nombre d’association.";
         var_dump(Divers::nombreAssociations());
 
-        echo "<hr>Afficher les vehicules n’ayant pas de conducteur .";
+        echo "<hr>Afficher les vehicules n’ayant pas de conducteur.";
         var_dump(Divers::vehiculesSansConducteur());
 
-        echo "<hr>Afficher les conducteurs n’ayant pas de vehicule .";
+        echo "<hr>Afficher les conducteurs n’ayant pas de vehicule.";
         var_dump(Divers::conducteursSansVehicule());
 
         echo "<hr>Afficher les vehicules conduit par « Philippe Pandre » ";

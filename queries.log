@@ -1,3 +1,44 @@
+[2019-02-11 16:49:41] SELECT *
+                FROM vehicule
+                LEFT JOIN association_vehicule_conducteur ON association_vehicule_conducteur.id_vehicule = vehicule.id
+                WHERE id_conducteur IS NULL
+[2019-02-11 16:49:41] SELECT COUNT(*)
+                FROM association_vehicule_conducteur
+[2019-02-11 16:49:41] SELECT COUNT(*)
+                FROM vehicule
+[2019-02-11 16:49:41] SELECT COUNT(*)
+                FROM conducteur
+[2019-02-11 16:49:40] SELECT *
+                FROM vehicule
+                LEFT JOIN association_vehicule_conducteur ON association_vehicule_conducteur.id_vehicule = vehicule.id
+                WHERE id_conducteur IS NULL
+[2019-02-11 16:49:40] SELECT COUNT(*)
+                FROM association_vehicule_conducteur
+[2019-02-11 16:49:40] SELECT COUNT(*)
+                FROM vehicule
+[2019-02-11 16:49:40] SELECT COUNT(*)
+                FROM conducteur
+[2019-02-11 16:49:03] SELECT *
+                FROM vehicule
+                LEFT JOIN association_vehicule_conducteur ON association_vehicule_conducteur.id_vehicule = vehicule.id
+                WHERE id_conducteur IS NULL
+[2019-02-11 16:49:03] SELECT COUNT(*)
+                FROM association_vehicule_conducteur
+[2019-02-11 16:49:03] SELECT COUNT(*)
+                FROM vehicule
+[2019-02-11 16:49:03] SELECT COUNT(*)
+                FROM conducteur
+[2019-02-11 16:47:25] SELECT *
+                FROM vehicule
+                LEFT JOIN association_vehicule_conducteur ON association_vehicule_conducteur.id_vehicule = vehicule.id
+                WHERE id_conducteur IS NULL
+[2019-02-11 16:47:25] SELECT COUNT(*)
+                FROM association_vehicule_conducteur
+[2019-02-11 16:47:25] SELECT COUNT(*)
+                FROM vehicule
+[2019-02-11 16:47:25] SELECT COUNT(*)
+                FROM conducteur
+[2019-02-11 16:47:22] SELECT * FROM conducteur
 [2019-02-11 16:27:53] SELECT * FROM association_vehicule_conducteur
 [2019-02-11 16:26:24] SELECT * FROM association_vehicule_conducteur
 [2019-02-11 16:24:51] SELECT * FROM vehicule
