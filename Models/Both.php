@@ -16,9 +16,9 @@ class Both extends Db {
     /**
      * Get the value of id
      */ 
-    public function id()
+    public function id_association()
     {
-        return $this->id;
+        return $this->id_association;
     }
 
     /**
@@ -28,7 +28,7 @@ class Both extends Db {
      */ 
     public function setId($id_association)
     {
-        $this->id = $id_association;
+        $this->id_association = $id_association;
 
         return $this;
     }
@@ -82,7 +82,7 @@ class Both extends Db {
         if(count($data) > 0) $data = $data[0];
         else return;
 
-        $both = new Both($data['id_vehicule'], $data['id_conducteur'], $data['id']);
+        $both = new Both($data['id_vehicule'], $data['id_conducteur'], $data['id_association']);
 
         return $both;
 
@@ -95,7 +95,7 @@ class Both extends Db {
         $both = [];
 
         foreach($datas as $data) {
-            $both[] = new Both($data['id_vehicule'], $data['id_conducteur'], $data['id']);
+            $both[] = new Both($data['id_vehicule'], $data['id_conducteur'], $data['id_association']);
         }
 
         return $both;
@@ -116,11 +116,11 @@ class Both extends Db {
 
     public function update() {
 
-        if ($this->id > 0) {
+        if ($this->id_association > 0) {
             $data = [
-                "id_vehicule"     => $this->idVehicule(),
-                "id_conducteur"    => $this->idConducteur(),
-                "id"        => $this->id()
+                "id_vehicule"           => $this->idVehicule(),
+                "id_conducteur"         => $this->idConducteur(),
+                "id_association"        => $this->id()
             ];
             Db::dbUpdate(self::TABLE_NAME, $data);
             return $this;
@@ -131,14 +131,14 @@ class Both extends Db {
     public function delete() {
 
         $data = [
-            'id' => $this->id(),
+            'id' => $this->id_association(),
         ];
         
         Db::dbDelete(self::TABLE_NAME, $data);
 
         // On supprime aussi les both !
         Db::dbDelete(Both::TABLE_NAME, [
-            'id_vehicule' => $this->id()
+            'id_vehicule' => $this->id_association()
         ]);
 
         return;

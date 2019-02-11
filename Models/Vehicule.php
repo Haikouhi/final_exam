@@ -21,9 +21,9 @@ class Vehicule extends Db {
     /**
      * Get the value of id
      */ 
-    public function id()
+    public function id_vehicule()
     {
-        return $this->id;
+        return $this->id_vehicule;
     }
 
     /**
@@ -33,7 +33,7 @@ class Vehicule extends Db {
      */ 
     public function setId($id_vehicule)
     {
-        $this->id = $id_vehicule;
+        $this->id_vehicule = $id_vehicule;
 
         return $this;
     }
@@ -153,14 +153,14 @@ public function nomComplet() {
     public static function findOne(int $id_vehicule) {
 
         $data = Db::dbFind(self::TABLE_NAME, [
-            ['id', '=', $id_vehicule]
+            ['id_vehicule', '=', $id_vehicule]
         ]);
 
         if(count($data) > 0) $data = $data[0];
         else return;
 
 
-        $vehicule = new Vehicule($data['marque'], $data['modele'], $data['couleur'], $date['immatriculation'], $data['id']);
+        $vehicule = new Vehicule($data['marque'], $data['modele'], $data['couleur'], $date['immatriculation'], $data['id_vehicule']);
 
         return $vehicule;
 
@@ -173,7 +173,7 @@ public function nomComplet() {
         $vehicules = [];
 
         foreach($datas as $data) {
-            $vehicules[] = new Vehicule($data['marque'], $data['modele'], $data['couleur'], $date['immatriculation'], $data['id']);
+            $vehicules[] = new Vehicule($data['marque'], $data['modele'], $data['couleur'], $date['immatriculation'], $data['id_vehicule']);
         }
 
         return $vehicules;
